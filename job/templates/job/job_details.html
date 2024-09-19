@@ -1,0 +1,286 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% get_available_languages as LANGUAGES %}
+
+{% block content %}
+<!-- Hero Area Start-->
+<div class="slider-area">
+    <div class="single-slider section-overly slider-height2 d-flex align-items-center"
+        data-background="/static/assets/img/hero/about.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="hero-cap text-center">
+
+                        {% if LANGUAGE_CODE == 'ar'%}
+                        <h2>{{job_details.title_ar}}</h2>
+                        {% else %}
+                        <h2>{{job_details.title_en}}</h2>
+                        {% endif %}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Hero Area End -->
+<!-- job post company Start -->
+<div class="job-post-company pt-120 pb-120">
+    <div class="container">
+        <div class="row">
+            <div class="col p-3">
+                
+                <!-- Display similar jobs -->
+                {% if similar_jobs %}
+                <div class="card p-3">
+                    <h3>{% trans 'Similar Jobs'%}</h3>
+                    <ul>
+                        {% for job in similar_jobs %}
+                        <li>{{ job.title_en }}</li>
+                        {% endfor %}
+                    </ul>
+                    
+                </div>
+                    {% endif %}
+
+                    
+            </div>
+        </div>
+        <div class="row ">
+            <!-- Left Content -->
+
+
+            <div class="col-xl-7 col-lg-8">
+                <!-- job single -->
+                <div class="single-job-items mb-30 shadow-lg p-2">
+                    <div class="job-items">
+                        <div class="company-img">
+                            {% if job_details.image %}
+
+                            <a href="#"><img width='100' height='100' src="{{job_details.image.url}}" alt=""></a>
+                            {% endif %}
+                        </div>
+                        <div class="job-tittle job-tittle2">
+                            <a href="#">
+                                {% if LANGUAGE_CODE == 'ar'%}
+                                <h4>{{job_details.title_ar}}</h4>
+                            </a>
+                            <ul>
+                                <li>{{job_details.job_type_ar}}</li>
+                                <li><i class="fas fa-map-marker-alt"></i>{{job_details.location_ar}}</li>
+                                <li>${{job_details.salary}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="items-link items-link2 f-right">
+                        <span>{{job_details.published_at}}</span>
+                    </div>
+                </div>
+
+                <div class="job-post-details ">
+                    <div class="post-details1 mb-50">
+                        <!-- Small Section Tittle -->
+                        <div class="small-section-tittle">
+                            <h4>{% trans 'Job Description'%}</h4>
+                        </div>
+
+                        <p>{{job_details.description_ar|safe}}</p>
+
+                    </div>
+                </div>
+            </div>
+            {% else %}
+            <h4>{{job_details.title_en}}</h4>
+        </a>
+        <ul>
+            <li>{{job_details.job_type_en}}</li>
+            <li><i class="fas fa-map-marker-alt"></i>{{job_details.location_en}}</li>
+            <li>${{job_details.salary}}</li>
+        </ul>
+    </div>
+</div>
+<div class="items-link items-link2 f-right">
+    <span>{{job_details.published_at}}</span>
+</div>
+</div>
+
+<div class="job-post-details ">
+<div class="post-details1 mb-50">
+    <!-- Small Section Tittle -->
+    <div class="small-section-tittle">
+        <h4>{% trans 'Job Description'%}</h4>
+    </div>
+
+    <p>{{job_details.description_en|safe}}</p>
+
+</div>
+</div>
+</div>
+
+            {% endif %}
+            <!-- job single End -->
+
+
+            <!-- Right Content -->
+            <div class="col-xl-5 col-lg-5 shadow-lg p-2 ">
+                <div class="post-details3  mb-50">
+                    <!-- Small Section Tittle -->
+                    <div class="small-section-tittle">
+
+                        <h4>{% trans 'Job Overview' %}</h4>
+                    </div>
+
+
+                    <ul>
+                        {% if LANGUAGE_CODE == 'ar'%}
+                        <li>{% trans ' Location : ' %}<span>{{job_details.location_ar}}</span></li>
+                        <li>{% trans 'Posted date : ' %}<span>{{job_details.published_at}}</span></li>                        
+                        <li>{% trans 'Vacancy : ' %}<span>{{job_details.vacancy}}</span></li>
+                        <li>{% trans 'Job nature : ' %}<span>{{job_details.job_type}}</span></li>
+                        <li>{% trans 'Salary :  ' %}<span>${{job_details.salary}} {% trans 'Monthly' %}</span></li>                       
+                        {% else %}
+                        <li>{% trans ' Location : ' %}<span>{{job_details.location_en}}</span></li>
+                        <li>{% trans 'Posted date : ' %}<span>{{job_details.published_at}}</span></li>                        
+                        <li>{% trans 'Vacancy : ' %}<span>{{job_details.vacancy}}</span></li>
+                        <li>{% trans 'Job nature : ' %}<span>{{job_details.job_type}}</span></li>
+                        <li>{% trans 'Salary :  ' %}<span>${{job_details.salary}} {% trans 'Monthly' %}</span></li>                        
+                        {% endif %}
+                    </ul>
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% if user.is_authenticated %}
+<div class="row p-5">
+    <!-- comment area-->
+    <div class="col shadow-lg  rounded m-1">
+        <span>
+            <p>{% trans 'Visitors Comments'%}
+                {% with comments.count as total_comments %}
+                <span class="float-right">
+                   {% trans 'Comment'%}  : {{ total_comments }}
+                </span>
+                {% endwith %}</p>
+        </span>
+        <div class="scrollable-page rounded p-2 border" style="background-color: #f0f2f5;">
+            {% for comment in comments %}
+            <div class="card m-2">
+                <div class="card-header ">
+                    {{comment.name}}
+                    <span class="float-right time"><i class="fas fa-clock"></i> {{comment.created}}</span>
+
+                </div>
+
+                <div class="card-body">
+                    <p class="card-text">{{ comment.body}}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- this comment form -->
+        <form class="input-group  input-group-sm pt-2" action="{% url 'job-details' job_details.slug %}" method="post"
+            enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="text" class="form-control" name="body" placeholder="{% trans 'Leave your comment here'%}" required>
+            <input type="hidden" name="action" value="leave_comment">
+            <span class="input-group-append">
+                <button type="submit" class="btn btn-danger btn-flat">{% trans 'Send'%}</button>
+            </span>
+        </form>
+        <!-- End comment form -->
+    </div>
+
+
+
+    <!-- comment area-->
+    <!-- Applying form -->
+    <div class="col shadow-lg  rounded m-1">
+        <P>{% trans 'Apply Here'%} </P>
+        <form class="form-contact contact_form" action="" method="post" enctype="multipart/form-data" id="applyForm">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <input type="email" class="form-control" name="email" placeholder="{% trans 'Contact Email'%}" required>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <input type="url" class="form-control" name="website" placeholder="{% trans 'Your Site (optional)'%}">
+                    </div>
+                </div>
+            </div>
+            <div id="cvError" class="text-danger"></div>
+            <input type="file" class="form-control" name="cv" id="cvInput"  required>            
+            <textarea class="form-control mt-4" name="cover_letter" id="exampleFormControlTextarea1"
+                placeholder="{% trans 'Cover Letter'%}" rows="7"></textarea>
+            <input type="hidden" name="action" value="apply_job">
+            <div class="d-grid gap-1">
+                <button type="submit" class="btn btn-danger btn-flat p-3 rounded mt-2 mb-3">{% trans 'Apply'%}</button>
+            </div>
+        </form>
+
+        <script>
+            document.getElementById('applyForm').addEventListener('submit', function (event) {
+                var cvInput = document.getElementById('cvInput');
+                var cvError = document.getElementById('cvError');
+                var allowedExtensions = /(\.pdf)$/i;
+
+                if (!allowedExtensions.exec(cvInput.value)) {
+                    cvError.textContent = '{% trans 'Please upload a PDF file.'%}';
+                    event.preventDefault(); // Prevent form submission
+                } else {
+                    cvError.textContent = ''; // Clear the error message
+                }
+            });
+        </script>
+    </div>
+    <!--End Applying form -->
+</div>
+
+
+{% else %}
+<div class="job_details_area p-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 mx-auto">
+                <div class="job_summary gray-bg p-3">
+                    <div class="summery_header">
+                        <h3>Sorry you must be logged in first</h3>
+                        <a class="btn head-btn2 " href="{% url 'login'%}">Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{%endif%}
+
+{% endblock %}

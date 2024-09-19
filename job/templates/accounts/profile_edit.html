@@ -1,0 +1,36 @@
+
+{% extends 'base.html' %}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+{% bootstrap_messages %}
+
+
+<!-- languages tags definition -->
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% get_available_languages as LANGUAGES %}
+{% get_language_info_list for LANGUAGES as languages %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+<div class="col-lg-10 mx-auto">
+
+    <form class="form-contact" action="" method="post" enctype="multipart/form-data">
+      
+        {% csrf_token %}
+       
+        
+        {% bootstrap_form userform %}
+        {% bootstrap_form profileform %}
+ 
+
+        {{ form.media }} <!-- Include this line to load the JavaScript file -->
+        <div class="form-group mt-3">
+            <input type="submit" class="button button-contactForm boxed-btn" value="{% trans 'Submit' %}">            </div>
+             </form>
+             
+</div>
+</div></div>
+{% endblock %}

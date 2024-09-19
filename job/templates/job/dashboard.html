@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block content %}
+
+<center>
+  <h1>{% trans 'User Dashboard'%}</h1>
+  <div class="d-flex justify-content-center">
+  <div class="items-link items-link2 f-right mr-1">
+    <a href="{% url 'admin:index' %}">{% trans 'Admin Panel'%}</a>
+    <span></span>
+</div>
+  
+  <div class="items-link items-link2 f-right mr-1">
+    <a href="/rosetta/">{% trans 'Translation Interface'%}</a>
+        <span></span>
+</div>
+  </div>
+ 
+  <form action="" method="POST">
+    {% csrf_token %}
+    <table class="table table-hover table-striped table-bordered">
+      <thead>
+        <tr>
+          <th>{% trans 'Job'%}</th>
+          <th>{% trans 'Status'%}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for job in job_list %}
+          <tr>
+            {% if LANGUAGE_CODE == 'ar'%}
+            <td>{{ job.title_ar }}</td>
+            {% else %}
+            <td>{{ job.title_en }}</td>
+            {% endif %}
+            <td>
+              <div class="form-check">
+                {% if job.available %}
+                  <input type="checkbox" checked="checked" class="form-check-input" value="{{ job.id }}" name="boxes">
+                {% else %}
+                  <input type="checkbox" class="form-check-input" value="{{ job.id }}" name="boxes">
+                {% endif %}
+              </div>
+            </td>
+          </tr>                               
+        {% endfor %}
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2" align="center">
+            <button class="btn btn-secondary" type="submit">{% trans 'Update'%}</button>
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  </form>
+  <br>
+</center>
+
+{% endblock %}

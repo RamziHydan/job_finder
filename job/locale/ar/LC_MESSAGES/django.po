@@ -1,0 +1,576 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-10-03 20:58+0300\n"
+"PO-Revision-Date: 2023-10-03 21:08+0000\n"
+"Last-Translator: Ramzi Haidan <ramzihaidan537@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Translated-Using: django-rosetta 0.9.9\n"
+
+#: .\myjob\admin.py:7 .\project\settings.py:135
+msgid "English"
+msgstr "إنجليزي"
+
+#: .\myjob\admin.py:10 .\project\settings.py:134
+msgid "Arabic"
+msgstr "عربي"
+
+#: .\myjob\admin.py:13
+msgid "Other"
+msgstr "اخريات"
+
+#: .\myjob\form.py:30
+msgid "test"
+msgstr "تجريبي"
+
+#: .\myjob\form.py:31
+msgid "English Content"
+msgstr "المحتوى إنجليزي"
+
+#: .\myjob\form.py:32
+msgid "Other Data"
+msgstr "بيانات اخرى"
+
+#: .\myjob\models.py:12
+msgid "Partly time"
+msgstr "دوام جزئي"
+
+#: .\myjob\models.py:13
+msgid "Fully time"
+msgstr "دوام كامل"
+
+#: .\myjob\models.py:19
+msgid "owner"
+msgstr "المالك"
+
+#: .\myjob\models.py:20
+msgid "title (Arabic)"
+msgstr "العنوان (عربي)"
+
+#: .\myjob\models.py:21
+msgid "location (Arabic)"
+msgstr "الموقع(عربي)"
+
+#: .\myjob\models.py:22
+msgid "description (Arabic)"
+msgstr "وصف(عربي)"
+
+#: .\myjob\models.py:24
+msgid "title (English)"
+msgstr "العنوان (إنجليزي)"
+
+#: .\myjob\models.py:25
+msgid "location (English)"
+msgstr "الموقع(إنجليزي)"
+
+#: .\myjob\models.py:26
+msgid "description (English)"
+msgstr "وصف(إنجليزي)"
+
+#: .\myjob\models.py:28
+msgid "job type"
+msgstr "نوع الوظيفة"
+
+#: .\myjob\models.py:29
+msgid "category"
+msgstr "الفئة"
+
+#: .\myjob\models.py:30
+msgid "vacancy"
+msgstr "خالي :"
+
+#: .\myjob\models.py:31
+msgid "salary"
+msgstr "المرتب"
+
+#: .\myjob\models.py:32
+msgid "experience"
+msgstr "الخبرة"
+
+#: .\myjob\models.py:33
+msgid "image"
+msgstr "صورة"
+
+#: .\myjob\models.py:34
+msgid "published at"
+msgstr "تايخ النشر"
+
+#: .\myjob\models.py:35
+msgid "available"
+msgstr "متوفر"
+
+#: .\myjob\models.py:37
+msgid "slug"
+msgstr "رابط نصي"
+
+#: .\myjob\models.py:47
+msgid "name (English)"
+msgstr "الاسم (إنجليزي)"
+
+#: .\myjob\models.py:48
+msgid "name (Arabic)"
+msgstr "الاسم(عربي)"
+
+#: .\myjob\models.py:56
+msgid "Applier"
+msgstr "المقدم"
+
+#: .\myjob\models.py:57
+msgid "job"
+msgstr "وظيفة"
+
+#: .\myjob\models.py:58
+msgid "email"
+msgstr "البريد"
+
+#: .\myjob\models.py:59
+msgid "website"
+msgstr "رابط موقعك"
+
+#: .\myjob\models.py:60
+msgid "cv"
+msgstr "ملف السيرة الذاتية"
+
+#: .\myjob\models.py:61
+msgid "cover letter"
+msgstr "نبذة"
+
+#: .\myjob\views.py:43
+msgid "Approval has been approved successfully 👍"
+msgstr "تهانينا ! لقد تمت عملية التحديث بنجاح ✅"
+
+#: .\myjob\views.py:53
+msgid "You need to be logged in to access this page."
+msgstr "يجب أن تكون مسجل للوصل الى هذة الصفحة"
+
+#: .\myjob\views.py:115
+msgid "You cannot apply for your own job."
+msgstr "لا يمكنك التقديم لوظيفتك التي نشرت"
+
+#: .\myjob\views.py:123
+msgid "Applying operation has been done successfully 👍"
+msgstr "تهانينا ! لقد قمت بالتقديم لهذة الوظيفة✅"
+
+#: .\myjob\views.py:173
+msgid "Your job has been added successfully"
+msgstr "تهانينا ! لقد تم نشر وظيفة جديدة بنجاح ✅"
+
+#: .\myjob\views.py:176
+msgid "There was an error saving the job. Please try again."
+msgstr "حدث مشكلة اثناء نشر الوظيفة. الرجاء إعادة المحاولة ❌"
+
+#: .\templates\accounts\profile_edit.html:31
+msgid "Submit"
+msgstr "موافق"
+
+#: .\templates\footer.html:15
+msgid "About Us"
+msgstr "عنا "
+
+#: .\templates\footer.html:17
+msgid ""
+"Heaven frucvitful doesn't cover lesser dvsays appear creeping seasons so "
+"behold."
+msgstr "مجرد نص تجريبي للتحقق من علية الترجمة"
+
+#: .\templates\footer.html:27
+msgid "Contact Info"
+msgstr "معلومات التواصل"
+
+#: .\templates\footer.html:30
+msgid "Address :Your address goes here, your demo address."
+msgstr "العنوان ؛ مجرد نص تجريبي للتاكد من علمية الترجمة"
+
+#: .\templates\footer.html:32
+msgid "Phone"
+msgstr "الهاتف"
+
+#: .\templates\footer.html:33
+msgid "Email"
+msgstr "البريد"
+
+#: .\templates\footer.html:42
+msgid "Important Link"
+msgstr "روابط مهمة"
+
+#: .\templates\footer.html:44
+msgid "View Project"
+msgstr "عرض المشروع "
+
+#: .\templates\footer.html:45
+msgid "Contact Us"
+msgstr "تواصل"
+
+#: .\templates\footer.html:46
+msgid "Testimonial"
+msgstr "تجريبي"
+
+#: .\templates\footer.html:47
+msgid "Proparties"
+msgstr "خصائص"
+
+#: .\templates\footer.html:48
+msgid "Support"
+msgstr "الدعم"
+
+#: .\templates\footer.html:56
+msgid "Newsletter"
+msgstr "اخبار"
+
+#: .\templates\footer.html:58
+msgid "Heaven fruitful doesn't over lesser in days. Appear creeping."
+msgstr "نص تجريبي لتحقق من علمية الترجمة"
+
+#: .\templates\footer.html:91 .\templates\footer.html:97
+#: .\templates\footer.html:104
+msgid "Talented Hunter"
+msgstr " تجريبي"
+
+#: .\templates\index.html:17
+msgid "Find the most exciting startup jobs"
+msgstr "احصل على اكثر الوظائف طلباً "
+
+#: .\templates\index.html:35 .\templates\index.html:149
+msgid "FEATURED TOURS Packages"
+msgstr "الفئات المميزة"
+
+#: .\templates\index.html:36
+msgid "Browse Top Categories"
+msgstr "تصفح الفئات المميزة"
+
+#: .\templates\index.html:48
+msgid "Design & Creative"
+msgstr "تصميم و ابداع"
+
+#: .\templates\index.html:59
+msgid "Design & Development"
+msgstr "تصميم وتطوير"
+
+#: .\templates\index.html:70
+msgid "Sales & Marketing"
+msgstr "مبيعات وتسويق"
+
+#: .\templates\index.html:81
+msgid "Mobile Application"
+msgstr "تطبيقات موبايل"
+
+#: .\templates\index.html:92
+msgid "Construction"
+msgstr "بناء"
+
+#: .\templates\index.html:103
+msgid "Information Technology"
+msgstr "تقنية معلومات"
+
+#: .\templates\index.html:114
+msgid "Real Estate"
+msgstr "عقارات"
+
+#: .\templates\index.html:125
+msgid "Content Writer"
+msgstr "كتابة المحتوى"
+
+#: .\templates\index.html:136
+msgid "Browse All Sectors"
+msgstr "تصفح جميع الاقسام"
+
+#: .\templates\index.html:150
+msgid " Make a Difference with Your Online Resume!"
+msgstr "اصنع الفرق مع سيرتك الذاتية "
+
+#: .\templates\index.html:151
+msgid "Upload your cv"
+msgstr "تحميل سيرتك الذاتية"
+
+#: .\templates\index.html:168
+msgid "Apply process"
+msgstr "عملية التقديم"
+
+#: .\templates\index.html:169
+msgid "How it works"
+msgstr "كيف تعمل"
+
+#: .\templates\index.html:181
+msgid "Search a job"
+msgstr "البحث عن وظائف"
+
+#: .\templates\index.html:182 .\templates\index.html:193
+#: .\templates\index.html:204
+msgid ""
+"Sorem spsum dolor sit amsectetur adipisclit, seddo eiusmod tempor incididunt"
+" ut laborea."
+msgstr ""
+"هذا هو مجرد نص تجريبي للتاكد من عملية الترجمة هذا هو مجرد نص تجريبي للتاكد "
+"من عملية الترجمة"
+
+#: .\templates\index.html:192
+msgid "Apply for job"
+msgstr "التقديم لوظيفة"
+
+#: .\templates\index.html:203 .\templates\job\job_listing.html:88
+msgid "Get your job"
+msgstr "احصل على و ظيفتك"
+
+#: .\templates\index.html:227 .\templates\index.html:244
+#: .\templates\index.html:261
+msgid "Margaret Lawson"
+msgstr ""
+
+#: .\templates\index.html:228 .\templates\index.html:245
+#: .\templates\index.html:262
+msgid "Creative Director"
+msgstr "مخرج ابداعي"
+
+#: .\templates\index.html:232 .\templates\index.html:249
+#: .\templates\index.html:266
+msgid ""
+"“I am at an age where I just want to be fit and healthy our bodies are our "
+"responsibility! So start caring for your body and it will care for you. Eat "
+"clean it will care for you and workout hard.”"
+msgstr ""
+"انا فقط في عمر حيث اريد ان اكون صحيحاً لان اجسادنا مسلؤليتنا يجيب ان نهتم "
+"بها  وان ناكل اكل صحي وخاصة اذا كنا نعمل بجد علينا ان نهتم بها"
+
+#: .\templates\index.html:284
+msgid "What we are doing"
+msgstr "ماذا تفعل؟"
+
+#: .\templates\index.html:285
+msgid "24k Talented people are getting Jobs"
+msgstr "24 الف من الناس الموهبة تحصل على الوظائف"
+
+#: .\templates\index.html:288
+msgid ""
+"Mollit anim laborum duis au dolor in voluptate velit ess cillum dolore eu "
+"lore dsu quality mollit anim laborumuis au dolor in voluptate velit cillum."
+msgstr ""
+"هذا هو مجرد نص تجريبي للتاكد من عملية الترجمة هذا هو مجرد نص تجريبي للتاكد "
+"من عملية الترجمة هذا هو مجرد نص تجريبي للتاكد من عملية الترجمة"
+
+#: .\templates\index.html:289
+msgid ""
+"Mollit anim laborum.Duis aute irufg dhjkolohr in re voluptate velit "
+"esscillumlore eu quife nrulla parihatur. Excghcepteur signjnt occa cupidatat"
+" non inulpadeserunt mollit aboru. temnthp incididbnt ut labore mollit anim "
+"laborum suis aute."
+msgstr ""
+"هذا هو مجرد نص تجريبي للتاكد من عملية الترجمة هذا هو مجرد نص تجريبي للتاكد "
+"من عملية الترجمة هذا هو مجرد نص تجريبي للتاكد من عملية الترجمة هذا هو مجرد "
+"نص تجريبي للتاكد من عملية الترجمة هذا هو مجرد نص تجريبي للتاكد من عملية "
+"الترجمة"
+
+#: .\templates\index.html:290
+msgid "Post a job"
+msgstr "نشر"
+
+#: .\templates\index.html:298
+msgid "Since"
+msgstr "منذ"
+
+#: .\templates\index.html:314
+msgid "Our latest blog"
+msgstr "اخر المدونات"
+
+#: .\templates\index.html:315
+msgid "Our recent news"
+msgstr "اخر الاخبار"
+
+#: .\templates\index.html:328 .\templates\index.html:347
+msgid "Now"
+msgstr "الان"
+
+#: .\templates\index.html:332 .\templates\index.html:351
+msgid "Properties"
+msgstr "خصائص"
+
+#: .\templates\index.html:333 .\templates\index.html:352
+msgid "Footprints in Time is perfect House in Kurashiki"
+msgstr "هذا هو مجرد نص تجريبي للتاكد من عملية الترجمة "
+
+#: .\templates\index.html:334 .\templates\index.html:353
+msgid "Read more"
+msgstr "قراءة اكثر"
+
+#: .\templates\job\add_job.html:14
+msgid "Arabic Content"
+msgstr "المحتوى عربي"
+
+#: .\templates\job\dashboard.html:6
+msgid "User Dashboard"
+msgstr "إدارة"
+
+#: .\templates\job\dashboard.html:7
+msgid "Admin Panel"
+msgstr "شاشة الآدمن الرئيسية"
+
+#: .\templates\job\dashboard.html:8
+msgid "Translation Interface"
+msgstr "شاشة الترجمة"
+
+#: .\templates\job\dashboard.html:14
+msgid "Job"
+msgstr "وظيفة"
+
+#: .\templates\job\dashboard.html:15
+msgid "Status"
+msgstr "الحالة"
+
+#: .\templates\job\dashboard.html:41
+msgid "Update"
+msgstr "تحديث"
+
+#: .\templates\job\job_details.html:40
+msgid "Similar Jobs"
+msgstr "وظائف مشابهة"
+
+#: .\templates\job\job_details.html:88 .\templates\job\job_details.html:115
+msgid "Job Description"
+msgstr "وصف الوظيفة"
+
+#: .\templates\job\job_details.html:134
+msgid "Job Overview"
+msgstr "عن الوظيفة"
+
+#: .\templates\job\job_details.html:140 .\templates\job\job_details.html:146
+msgid " Location : "
+msgstr "الموقع :"
+
+#: .\templates\job\job_details.html:141 .\templates\job\job_details.html:147
+msgid "Posted date : "
+msgstr "تاريخ النشر : "
+
+#: .\templates\job\job_details.html:142 .\templates\job\job_details.html:148
+msgid "Vacancy : "
+msgstr "خالي :"
+
+#: .\templates\job\job_details.html:143 .\templates\job\job_details.html:149
+msgid "Job nature : "
+msgstr "طبيعة الوظيفة :"
+
+#: .\templates\job\job_details.html:144 .\templates\job\job_details.html:150
+msgid "Salary :  "
+msgstr "المرتب :"
+
+#: .\templates\job\job_details.html:144 .\templates\job\job_details.html:150
+msgid "Monthly"
+msgstr "شهرياً"
+
+#: .\templates\job\job_details.html:184
+msgid "Visitors Comments"
+msgstr "تعليقات الزوار"
+
+#: .\templates\job\job_details.html:187
+msgid "Comment"
+msgstr "التعليقات"
+
+#: .\templates\job\job_details.html:211
+msgid "Leave your comment here"
+msgstr "اترك تعليقك"
+
+#: .\templates\job\job_details.html:214
+msgid "Send"
+msgstr "ارسال"
+
+#: .\templates\job\job_details.html:225
+msgid "Apply Here"
+msgstr "قدم هنا"
+
+#: .\templates\job\job_details.html:231
+msgid "Contact Email"
+msgstr "بريد التواصل"
+
+#: .\templates\job\job_details.html:236
+msgid "Your Site (optional)"
+msgstr "موقعك (اختياري)"
+
+#: .\templates\job\job_details.html:243
+msgid "Cover Letter"
+msgstr "اكتب نبذة مختصرة عنك"
+
+#: .\templates\job\job_details.html:246
+msgid "Apply"
+msgstr "تقديم"
+
+#: .\templates\job\job_details.html:257
+msgid "Please upload a PDF file."
+msgstr "يرجى رفع ملف PDF"
+
+#: .\templates\navbar.html:64
+msgid "Home"
+msgstr "الرئيسة"
+
+#: .\templates\navbar.html:65
+msgid "Find a Jobs"
+msgstr "وظائف"
+
+#: .\templates\navbar.html:66
+msgid "Post a Jobs"
+msgstr "نشر"
+
+#: .\templates\navbar.html:67
+msgid "Blog"
+msgstr "مدونة"
+
+#: .\templates\navbar.html:68
+msgid "About"
+msgstr "عنا"
+
+#: .\templates\navbar.html:69
+msgid "Contact"
+msgstr "تواصل"
+
+#: .\templates\navbar.html:77
+msgid "Dashboard"
+msgstr "إدارة"
+
+#: .\templates\navbar.html:78
+msgid "Logout"
+msgstr "خروج"
+
+#: .\templates\navbar.html:82
+msgid "Login"
+msgstr "دخول"
+
+#: .\templates\navbar.html:83
+msgid "Sigin"
+msgstr "تسجيل "
+
+#~ msgid "cover_letter"
+#~ msgstr "اكتب نبذة مختصرة عنك"
+
+#~ msgid "content"
+#~ msgstr "المحتوى"
+
+#~ msgid "created at"
+#~ msgstr "تاريخ النشر"
+
+#~ msgid "yearly"
+#~ msgstr "سنوياً :"
+
+#~ msgid "job type (Arabic)"
+#~ msgstr "نوع الوظيفة (عربي)"
+
+#~ msgid "job type (English)"
+#~ msgstr "نوع الوظيفة (إنجليزي)"
+
+#, fuzzy
+#~ msgid "Testing"
+#~ msgstr "تجريبي"
+
+#~ msgid "title"
+#~ msgstr "عنوان "
+
+#~ msgid "name"
+#~ msgstr "الاسم"

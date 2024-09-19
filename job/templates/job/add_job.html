@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+{% bootstrap_messages %}
+{% load i18n %}
+{% block content %}
+<div class="container">
+    <div class="row">        
+        <form class="form-contact shadow-lg p-2 mb-5" action="" method="post" enctype="multipart/form-data">
+            <div class="col">
+                    {% csrf_token %}
+                    <h3 style="text-align: center;">{% trans 'Arabic Content' %}</h3>
+                    {% bootstrap_form form %}
+                    {{form.media}}               
+                <input type="submit" class="button button-contactForm boxed-btn"></input>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

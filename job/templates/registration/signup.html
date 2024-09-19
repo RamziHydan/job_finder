@@ -1,0 +1,19 @@
+{% extends "base_generic.html" %}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+{% bootstrap_messages %}
+
+{% block body %}  
+<form    method="post"> 
+    {% csrf_token %} 
+    {% bootstrap_form form %}
+
+
+    {% comment %} {{ form.media }} <!-- Include this line to load the JavaScript file --> {% endcomment %}
+    <input    type="submit" class="btn btn-default btn-lg"   value="login">
+</form>
+{# Assumes you setup the password_reset view in your URLconf #} 
+<p><a class='link' href="{% url 'password_reset' %} ">Lost password?</a></p> 
+
+{% endblock %}

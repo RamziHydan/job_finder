@@ -1,0 +1,104 @@
+
+{% load i18n %}
+{% load static %}
+{% get_current_language as LANGUAGE_CODE %}
+{% get_available_languages as LANGUAGES %}
+{% get_language_info_list for LANGUAGES as languages %}
+
+<header>
+    <style>
+        .button {
+            border: none;
+            color: white;            
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            transition-duration: 0.4s;
+            cursor: pointer;
+            border-radius: 5px;
+          }
+          .button3:hover {
+            background-color: #f44336;
+            color: white;
+          }
+          .button3 {
+            background-color: white; 
+            color: black; 
+            border: 2px solid #f44336;
+          }
+
+
+        header a {
+            color: black;
+            font-family: "Muli", sans-serif;
+        }
+    </style>
+    <!-- Header Start -->
+   <div class="header-area header-transparrent">
+       <div class="headder-top header-sticky">
+            <div class="container">
+                <div class="row align-items-center"  height=40>
+                    <div class="col-lg-12">
+                        <div class="menu-wrapper">
+                            <!-- Main-menu -->
+                            <div class="main-menu">
+                                <nav class="d-none d-lg-block">
+                                    <ul id="navigation">     
+                                        <li><a href="{% url 'index' %}"><img src="/static/assets/img/logo/logo.png" alt="" height=40></a>
+                                        </li>                                 
+                                        <li>
+                                            <form action="{% url 'set_language' %}" method="post">
+                                                {% csrf_token %}
+                                                {% get_current_language as LANGUAGE_CODE %}
+                                                {% get_available_languages as LANGUAGES %}
+                                                <input type="hidden" name="next" value="{{ request.get_full_path|slice:'3:' }}">
+                                                {% if LANGUAGE_CODE == 'ar'%}                       
+                                                <button type="submit" name="language"  value="en" class="button button3" >
+                                                            English</button>                        
+                                                            {% else %}
+                                                <button type="submit" name="language"  value="ar" class="button button3">
+                                                عربي</button>                    
+                                                            {% endif %}                        
+                                                </form>                                                
+                                        </li>
+                                        <li><a href="{% url 'index' %}">{% trans "Home" %}</a></li>
+                                        <li><a href="{% url 'job-list' %}">{% trans "Find a Jobs" %} </a></li>
+                                        <li><a href="{% url 'add-job' %}">{% trans "Post a Jobs" %} </a></li>
+                                        <li><a href="{% url 'blog:post_list' %}">{% trans "Blog" %} </a></li>
+                                        <li><a href="#">{% trans "About" %}</a></li>
+                                        <li><a href="{% url 'contact:contact-view' %}">{% trans "Contact" %}</a></li>                                    
+                                    </ul>
+                                    </div>
+                                    <div class="main-menu">
+                                        <nav class="d-none d-lg-block">
+                                             <ul>                   
+                                    {% if user.is_authenticated %} 
+                                    <div class="right-item" >             
+                                    <li><a  href="{% url 'admin-approval' %}">{% trans "Dashboard" %}</a>  </li>                               
+                                    <li><a  href="{% url 'logout' %}"  >{% trans "Logout" %}</a></li>                              
+                                    <li> <a href="{% url 'account:profile' %}"><img src="{% if profile.image %}  {{profile.image.url}} {% else %} {% static '/user.jpg' %} {% endif %}" class="direct-chat-img rounded-circle" alt="User Image" width='42'height='45'>                                
+                                    </a>  </li>                                
+                                    {% else %}                             
+                                    <li><a href="{% url 'login' %}" >{% trans "Login" %}</a>  </li>                             
+                                    <li><a href="{% url 'account:signup' %}" >{% trans "Sigin" %}</a> </li>                             
+                                    {% endif %}
+                                </ul>
+                            </div> 
+                        </div> 
+                                </nav>
+                            </div>          
+                            </div>          
+                            <!-- Header-btn -->
+                            
+                        </div>
+                    </div>
+                    <!-- Mobile Menu -->
+                    <div class="col-12">
+                        <div class="mobile_menu d-block d-lg-none"></div>
+                    </div>
+                </div>
+            </div>
+       </div>
+   </div>
+    <!-- Header End -->
+</header>

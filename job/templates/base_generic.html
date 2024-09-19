@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container m-5 ">
+    <div class="row">
+        <div class="col mx-auto">
+            <div class="gray-bg p-3">           
+                {% block body %}
+                {% endblock  %}
+            </div>     
+        </div>
+    </div>
+</div>
+{% endblock %}
